@@ -1,12 +1,14 @@
 // ==UserScript==
 // @name         Better KFTs
 // @namespace    local.servicenow.better-kfts
-// @version      1.7.1
+// @version      1.7.3
 // @description  Read KFT descriptions more easily with wrapping, readable characters, clickable links and stable row shading.
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=service-now.com
 // @match        https://*.service-now.com/now/nav/ui/*
 // @match        https://*.service-now.com/kb_feedback_task_list.do*
 // @match        https://*.service-now.com/kb_feedback_task.do*
+// @updateURL    https://gist.githubusercontent.com/Miche-Miche-Miche/1bd2b67a3dc34b9fc7570ff3b7be589e/raw/Better_KFTs.user.js
+// @downloadURL  https://gist.githubusercontent.com/Miche-Miche-Miche/1bd2b67a3dc34b9fc7570ff3b7be589e/raw/Better_KFTs.user.js
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==
@@ -22,20 +24,14 @@ MAINTAINERS: Update this introduction and the changelog after every significant
 change, so they describe what the current script actually does.
 */
 
-/* GIST INSTALLATION AND UPDATES
-After publishing this file as Better_KFTs.user.js, add these two metadata lines
-before ==/UserScript==, replacing RAW_GIST_URL with the same real, stable raw
-Gist URL in both lines. Do not include a revision hash after /raw/.
-
-// @updateURL    RAW_GIST_URL
-// @downloadURL  RAW_GIST_URL
-
-These examples are outside the metadata block and are not active update links.
-The stable raw URL is also the installation link. Increase @version whenever
-you publish a new release. Never point these fields at another author's script.
-*/
-
 /** Changelog
+ * v1.7.3 - Repository-based updates
+ * - Makes the repository file the source for installation and updates.
+ * - Keeps the hosted filename fixed as Better_KFTs.user.js.
+ * - No changes to description rendering or record editing.
+ *
+ * v1.7.2 - Adds installation and automatic-update URLs.
+ * 
  * v1.7.1 - Instance-neutral metadata and Gist preparation
  * - Removes company-specific references from the namespace, URLs and comments.
  * - Matches KFT routes and supported navigation views on ServiceNow subdomains.
@@ -329,7 +325,7 @@ you publish a new release. Never point these fields at another author's script.
     const escaped = character.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const bytes = [...new Set([character.toLowerCase(), character.toUpperCase()])]
       .map((letter) => letter.charCodeAt(0).toString(16)).join('|');
-    return `(?:${escaped}|%(?:25){0,3}(?:${bytes}))`;
+    return `(?:escaped|%(?:25)0,3(?:{bytes}))`;
   }
   function encodedScheme(scheme) {
     return [...scheme].map(schemeCharacter).join('');
