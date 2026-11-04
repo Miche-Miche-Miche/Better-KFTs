@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Better KFTs
 // @namespace    local.servicenow.better-kfts
-// @version      1.7.3
+// @version      1.7.4
 // @description  Read KFT descriptions more easily with wrapping, readable characters, clickable links and stable row shading.
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=service-now.com
 // @match        https://*.service-now.com/now/nav/ui/*
 // @match        https://*.service-now.com/kb_feedback_task_list.do*
 // @match        https://*.service-now.com/kb_feedback_task.do*
-// @updateURL    https://gist.githubusercontent.com/Miche-Miche-Miche/1bd2b67a3dc34b9fc7570ff3b7be589e/raw/Better_KFTs.user.js
-// @downloadURL  https://gist.githubusercontent.com/Miche-Miche-Miche/1bd2b67a3dc34b9fc7570ff3b7be589e/raw/Better_KFTs.user.js
+// @updateURL    https://raw.githubusercontent.com/Miche-Miche-Miche/Better-KFTs/main/Better_KFTs.user.js
+// @downloadURL  https://raw.githubusercontent.com/Miche-Miche-Miche/Better-KFTs/main/Better_KFTs.user.js
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==
@@ -25,6 +25,9 @@ change, so they describe what the current script actually does.
 */
 
 /** Changelog
+ * v1.7.4 - Repository-based updates
+ * - Replaced the previous Git URLs with the new ones.
+ *
  * v1.7.3 - Repository-based updates
  * - Makes the repository file the source for installation and updates.
  * - Keeps the hosted filename fixed as Better_KFTs.user.js.
