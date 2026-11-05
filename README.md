@@ -1,8 +1,8 @@
 # Better KFTs
-A lightweight userscript for clearer ServiceNow Knowledge Feedback Tasks: wrapped descriptions, clickable links, decoded characters and consistent row shading.
+A [Tampermonkey](https://www.tampermonkey.net/) userscript that gives ServiceNow Knowledge Feedback Tasks readable descriptions, clickable links and steady row shading.
 
- ## Install
+## Install
 
- Install Tampermonkey, then open [Install Better KFTs](https://raw.githubusercontent.com/Miche-Miche-Miche/Better-KFTs/main/Better_KFTs.user.js) and approve installation.
+Install Tampermonkey, then open [Install Better KFTs](https://raw.githubusercontent.com/Miche-Miche-Miche/Better-KFTs/main/Better_KFTs.user.js) and approve the installation.
 
- Updates are published from this repository. Enable automatic update checks in your userscript manager.
+Updates are published from this repository. Enable automatic update checks in your userscript manager.
